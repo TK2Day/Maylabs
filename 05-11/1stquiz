@@ -1,0 +1,33 @@
+Section 1 - Top Level Code, Simple Block Usage
+
+ages = [28, 32, 42, 64]
+ages.map { |x| x * 2 }
+ages.each { |age| puts "Age is: #{age}" }
+
+   What is the result of the ages.map call? What about ages.each?
+    It lists the number of ages after multiplying them by 2
+    ages.each takes each number and the prints(puts) it into the string
+
+    Is x in scope during ages.each?
+    X is not in the scope of .each since it is not callled.
+
+
+Section 2 - Functions, Parameters, and Hashes
+
+days = { monday: 'energized',
+         tuesday: 'excited',
+         wednesday: 'resilient',
+         thursday: 'exhausted',
+         friday: 'drinking' }
+
+def my_example(week)
+  day = week.keys.sample
+  print_feels(day)
+end
+
+def print_feels(stuff)
+  puts "Today I'm feeling quite: #{stuff}"
+end
+
+    What is the value of stuff in a call to print_feels?
+    nothing, since stuff isn't set anywhere there is nothing to call.
